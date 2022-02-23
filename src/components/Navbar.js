@@ -5,9 +5,6 @@ const Navbar = () => {
 return (
 	<>
 	<Nav>
-		<Bars />
-		<NavMenu>
-		</NavMenu>
 	</Nav>
 	</>
 );
