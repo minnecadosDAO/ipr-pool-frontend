@@ -3,8 +3,7 @@ import React from 'react';
 import '../App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook } from '@fortawesome/free-solid-svg-icons';
-import { faDiscord, faMedium, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faDiscord, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
 import Navbar from './Navbar';
 
 function Home() {
