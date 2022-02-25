@@ -1,4 +1,3 @@
-/*
 import React from 'react';
 import { Nav, Bars, NavMenu, NavBtn, NavBtnLink } from './NavbarElements';
 import { Coin, Extension, LCDClient, MsgSwap, MsgInstantiateContract } from "@terra-money/terra.js";
@@ -56,4 +55,3 @@ const AppNavbar = () => {
 };
 
 export default AppNavbar;
-*/

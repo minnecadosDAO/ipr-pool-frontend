@@ -1,4 +1,3 @@
-/*
 import { useWallet, WalletStatus } from '@terra-dev/use-wallet'
 import 'bootstrap/dist/css/bootstrap.css';
 import Button from 'react-bootstrap/Button'
@@ -49,4 +48,3 @@ export const ConnectWallet = () => {
     </div>
   )
 }
-*/

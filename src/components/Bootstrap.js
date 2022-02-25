@@ -1,4 +1,3 @@
-/*
 import React from 'react';
 import '../App.css';
 import { Coin, Extension, LCDClient, MsgSwap, MsgInstantiateContract } from "@terra-money/terra.js";
@@ -191,4 +190,3 @@ function Bootstrap() {
 }
 
 export default Bootstrap;
-*/
