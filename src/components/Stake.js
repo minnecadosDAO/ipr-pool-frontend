@@ -1,5 +1,3 @@
-/*
-
 import React from 'react';
 import '../App.css';
 import { Coin, Extension, LCDClient, MsgSwap, MsgInstantiateContract } from "@terra-money/terra.js";
@@ -32,9 +30,8 @@ const useStyles = makeStyles((theme: Theme) =>
 
 function Bootstrap() {
   const classes = useStyles();
-  //const [address, setAddress] = useState();
+  const [address, setAddress] = useState();
 
-/*
   useEffect(() => {
     const getAddress = async () => {
       const res = await ext.request('connect');
@@ -75,4 +72,3 @@ function Bootstrap() {
 }
 
 export default Bootstrap;
-*/

@@ -4,9 +4,11 @@ import { Nav, Bars, NavMenu, NavBtn, NavBtnLink } from './NavbarElements';
 const Navbar = () => {
 return (
 	<>
-	<Nav>
-		<Bars />
+	<Nav className="justify-content-end" style={{ width: "100%" }}>
 		<NavMenu>
+			<NavBtn>
+				<NavBtnLink to='/app/bootstrap'>App</NavBtnLink>
+			</NavBtn>
 		</NavMenu>
 	</Nav>
 	</>

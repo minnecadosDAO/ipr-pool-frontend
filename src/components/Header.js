@@ -1,5 +1,4 @@
 //import useState hook to create menu collapse state
-/*
 import React from "react";
 
 //import react pro sidebar components
@@ -53,7 +52,6 @@ const Header = () => {
   return (
     <>
       <div id="header">
-          {/* collapsed props to change menu size using menucollapse state}
         <ProSidebar>
           <SidebarHeader>
             <div className="logotext">
@@ -100,5 +98,3 @@ const Header = () => {
 };
 
 export default Header;
-
-*/
