@@ -17,7 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/app" element={<Dapp />}/>
-          <Route path="/app/bootstrap" element={<Bootstrap />}/>
+          <Route path="/app/ipr" element={<Bootstrap />}/>
           <Route path="/app/stake" element={<Stake />}/>
           <Route path="/app/perpetual" element={<Perpetual />}/>
           <Route path="/app/faq" element={<Faq />}/>

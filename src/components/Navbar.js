@@ -7,7 +7,7 @@ return (
 	<Nav className="justify-content-end" style={{ width: "100%" }}>
 		<NavMenu>
 			<NavBtn>
-				<NavBtnLink to='/app/bootstrap'>App</NavBtnLink>
+				<NavBtnLink to='/app/ipr'>App</NavBtnLink>
 			</NavBtn>
 		</NavMenu>
 	</Nav>
