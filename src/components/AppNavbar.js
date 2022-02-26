@@ -12,6 +12,7 @@ const client = new LCDClient({
   URL: 'https://lcd.terra.dev',
   chainID: 'columbus-5'
 })
+*/
 
 const client = new LCDClient({
   URL: 'https://bombay-lcd.terra.dev',
@@ -36,7 +37,6 @@ const AppNavbar = () => {
 	return (
 		<>
 		<Nav>
-			<Bars />
 			<NavMenu>
 			</NavMenu>
 			<NavBtn>

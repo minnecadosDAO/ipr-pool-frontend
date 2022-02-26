@@ -4,7 +4,12 @@ import { Nav } from './NavbarElements';
 const Navbar = () => {
 return (
 	<>
-	<Nav>
+	<Nav className="justify-content-end" style={{ width: "100%" }}>
+		<NavMenu>
+			<NavBtn>
+				<NavBtnLink to='/app/bootstrap'>App</NavBtnLink>
+			</NavBtn>
+		</NavMenu>
 	</Nav>
 	</>
 );
