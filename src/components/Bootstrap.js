@@ -80,9 +80,9 @@ function Bootstrap() {
   return (
     <div className="App">
       <Header />
-      <div>
-        <AppNavbar />
-      </div>
+
+      <br/>
+      Initial Public Raise Pool coming soon! Preview below!
       <br/>
       <div style={{ width: '90%', padding: '20px', position: 'relative', left: '40px'}}>
       <Grid container spacing={3}>
@@ -124,10 +124,10 @@ function Bootstrap() {
             <form className="row g-3">
               <div className="col-md-6">
                 <label className="visually-hidden">UST</label>
-                <input type="number" className="form-control"/>
+                <input type="number" className="form-control" disabled/>
               </div>
               <div className="col-md-6">
-                <button type="submit" className="btn" style={{backgroundColor: '#003B37', color: 'white'}}>Deposit</button>
+                <button disabled type="submit" className="btn" style={{backgroundColor: '#003B37', color: 'white'}}>Deposit</button>
               </div>
             </form>
             <br/><br/>
@@ -138,10 +138,11 @@ function Bootstrap() {
             <h2>Withdraw UST</h2><br/>
             <form className="row g-3">
               <div className="col-md-6">
-                100 UST
+                <label className="visually-hidden">UST</label>
+                <input disabled type="number" className="form-control"/>
               </div>
               <div className="col-md-3">
-                <button type="submit" className="btn" style={{backgroundColor: '#003B37', color: 'white'}}>Withdraw</button>
+                <button disabled type="submit" className="btn" style={{backgroundColor: '#003B37', color: 'white'}}>Withdraw</button>
               </div>
             </form>
             <br/><br/>
@@ -161,7 +162,7 @@ function Bootstrap() {
                 Claimable: 100 MIN
               </div>
               <div className="col-md-6">
-                <button type="submit" className="btn" style={{backgroundColor: '#003B37', color: 'white'}}>Claim MIN</button>
+                <button disabled type="submit" className="btn" style={{backgroundColor: '#003B37', color: 'white'}}>Claim MIN</button>
               </div>
             </form>
             <br/><br/>
@@ -175,7 +176,7 @@ function Bootstrap() {
                 Balance: 100 MIN
               </div>
               <div className="col-md-6">
-                <button type="submit" className="btn" style={{backgroundColor: '#003B37', color: 'white'}}>Sell MIN</button>
+                <button disabled type="submit" className="btn" style={{backgroundColor: '#003B37', color: 'white'}}>Sell MIN</button>
               </div>
             </form>
             <br/><br/>

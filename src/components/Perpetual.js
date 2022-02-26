@@ -44,9 +44,6 @@ function Bootstrap() {
   return (
     <div className="App">
       <Header />
-      <div>
-        <AppNavbar />
-      </div>
       <br/>
       Coming soon!
     </div>

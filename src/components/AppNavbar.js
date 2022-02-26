@@ -6,19 +6,20 @@ import { ConnectWallet } from './ConnectWallet'
 import { WalletStatus, WalletInfo } from '@terra-dev/use-wallet'
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import { useWallet } from '@terra-money/wallet-provider';
+import ReactDOM from 'react-dom'
 
-/*
+
 const client = new LCDClient({
   URL: 'https://lcd.terra.dev',
   chainID: 'columbus-5'
 })
-*/
 
+/*
 const client = new LCDClient({
   URL: 'https://bombay-lcd.terra.dev',
   chainID: 'bombay-12'
 })
-
+*/
 
 const AppNavbar = () => {
 	const { status, network, wallets } = useWallet();
@@ -32,7 +33,7 @@ const AppNavbar = () => {
 	 	}).catch(error => {
 		 	console.log(error);
 	 	});
-	}
+  }
 
 	return (
 		<>
@@ -43,7 +44,7 @@ const AppNavbar = () => {
 			{status === WalletStatus.WALLET_CONNECTED && (
 				<div>
 		      <section>
-					<p style={{marginRight: '15px', marginTop: '10px'}}>{ust} UST</p>
+					<p style={{marginRight: '15px', marginTop: '10px'}}><span id='ust'>{ust}</span> UST</p>
 		      </section>
 		    </div>
 			)}

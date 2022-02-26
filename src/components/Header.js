@@ -81,7 +81,7 @@ const Header = () => {
                 <a style={{color: 'black'}} href='https://minnecados.gitbook.io/minnecados-protocol/'>Docs</a>
               </MenuItem>
               <MenuItem icon={<FaDiscord />}>
-                <a style={{color: 'black'}} href="https://discord.com/channels/898669026597802025/898675037903659018">Discord</a>
+                <a style={{color: 'black'}} href="https://discord.gg/kqVfW4J8RP">Discord</a>
               </MenuItem>
               <MenuItem icon={<FaTwitter />}>
                 <a style={{color: 'black'}} href="https://twitter.com/minnecados">Twitter</a>
