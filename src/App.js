@@ -7,8 +7,6 @@ import Bootstrap from './components/Bootstrap.js'
 import Stake from './components/Stake.js'
 import Perpetual from './components/Perpetual.js'
 import Faq from './components/Faq.js'
-import Dapp from './components/App.js'
-
 
 function App() {
   return (
@@ -16,7 +14,10 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<Home />}/>
-          <Route path="/donate" element={<Donate />}/>
+          <Route path="/app/ipr" element={<Bootstrap />}/>
+          <Route path="/app/stake" element={<Stake />}/>
+          <Route path="/app/perpetual" element={<Perpetual />}/>
+          <Route path="/app/faq" element={<Faq />}/>
         </Routes>
       </div>
     </Router>
