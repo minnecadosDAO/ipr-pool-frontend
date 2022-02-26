@@ -22,7 +22,7 @@ let faq = false;
 
 function getPath() {
   const pathname = window.location.pathname //returns the current url minus the domain name
-  if(pathname === '/app/bootstrap'){
+  if(pathname === '/app/ipr'){
     bootstrap = true;
     stake = false;
     perpetual = false;
@@ -62,7 +62,7 @@ const Header = () => {
           <SidebarContent>
             <Menu iconShape="square">
               <MenuItem active={bootstrap} icon={<GiFurBoot />}>
-                <Link style={{color: 'black'}} to='/app/bootstrap'>Bootstrap Pool</Link>
+                <Link style={{color: 'black'}} to='/app/ipr'>IPR Pool</Link>
               </MenuItem>
               <MenuItem active={stake} icon={<GiFarmer />}>
                 <Link style={{color: 'black'}} to='/app/stake'>Stake</Link>
