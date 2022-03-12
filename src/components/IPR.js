@@ -12,11 +12,18 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import {AnchorEarn, CHAINS, NETWORKS } from '@anchor-protocol/anchor-earn';
 import ReactDOM from 'react-dom'
+import { ConnectWallet } from './ConnectWallet'
+import { useWallet, useConnectedWallet, WalletStatus, } from '@terra-money/wallet-provider'
 
+import * as execute from '../contract/execute'
+import * as query from '../contract/query'
+
+/*
 const client = new LCDClient({
   URL: 'https://bombay-lcd.terra.dev',
   chainID: 'bombay-12',
 })
+*/
 
 const ext = new Extension();
 
@@ -33,7 +40,7 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-function Bootstrap() {
+function IPR() {
   const classNames = useStyles();
   const [address, setAddress] = useState();
 
@@ -45,7 +52,6 @@ function Bootstrap() {
     };
     getAddress();
   }, []);
-
 
   if(address){
     const anchorEarn = new AnchorEarn({
@@ -77,12 +83,45 @@ function Bootstrap() {
     });
   }
 
+  const [count, setCount] = useState(null)
+  const [updating, setUpdating] = useState(true)
+  const [resetValue, setResetValue] = useState(0)
+
+  const { status } = useWallet()
+
+  const connectedWallet = useConnectedWallet()
+
+  useEffect(() => {
+    const prefetch = async () => {
+      if (connectedWallet) {
+        setCount((await query.getCount(connectedWallet)).count)
+      }
+      setUpdating(false)
+    }
+    prefetch()
+  }, [connectedWallet])
+
+  const onClickIncrement = async () => {
+    setUpdating(true)
+    //await execute.increment(connectedWallet)
+    //setCount((await query.getCount(connectedWallet)).count)
+    setUpdating(false)
+  }
+
+  const onClickReset = async () => {
+    setUpdating(true)
+    console.log(resetValue)
+    //await execute.reset(connectedWallet, resetValue)
+    //setCount((await query.getCount(connectedWallet)).count)
+    setUpdating(false)
+  }
+
   return (
     <div className="App">
       <Header />
-
-      <br/>
-      Initial Public Raise Pool coming soon! Preview below!
+      <div>
+        <AppNavbar />
+      </div>
       <br/>
       <div style={{ width: '90%', padding: '20px', position: 'relative', left: '40px'}}>
       <Grid container spacing={3}>
@@ -91,25 +130,25 @@ function Bootstrap() {
         <Grid item xs={6} sm={2}>
           <Paper className={classNames.paper} style={{color: 'white', backgroundColor: '#018505'}}>
             0-1 Month
-            <p><span id='t1'>{teir1}</span>% APR</p>
+            <p><span id='t1'></span>% APR</p>
           </Paper>
         </Grid>
         <Grid item xs={6} sm={2}>
           <Paper className={classNames.paper} style={{color: 'white', backgroundColor: '#018505'}}>
             1-6 Months
-            <p><span id='t2'>{teir2}</span>% APR</p>
+            <p><span id='t2'></span>% APR</p>
           </Paper>
         </Grid>
         <Grid item xs={6} sm={2}>
           <Paper className={classNames.paper} style={{color: 'white', backgroundColor: '#018505'}}>
             6-12 Months
-            <p><span id='t3'>{teir3}</span>% APR</p>
+            <p><span id='t3'></span>% APR</p>
           </Paper>
         </Grid>
         <Grid item xs={6} sm={2}>
           <Paper className={classNames.paper} style={{color: 'white', backgroundColor: '#018505'}}>
             12+ Months
-            <p><span id='t4'>{teir4}</span>% APR</p>
+            <p><span id='t4'></span>% APR</p>
           </Paper>
         </Grid>
         <Grid item xs={6} sm={1}>
@@ -124,10 +163,10 @@ function Bootstrap() {
             <form className="row g-3">
               <div className="col-md-6">
                 <label className="visually-hidden">UST</label>
-                <input type="number" className="form-control" disabled/>
+                <input min='0' type="number" className="form-control"/>
               </div>
               <div className="col-md-6">
-                <button disabled type="submit" className="btn" style={{backgroundColor: '#003B37', color: 'white'}}>Deposit</button>
+                <button onClick={onClickIncrement} type="submit" className="btn" style={{backgroundColor: '#003B37', color: 'white'}}>Deposit</button>
               </div>
             </form>
             <br/><br/>
@@ -139,10 +178,10 @@ function Bootstrap() {
             <form className="row g-3">
               <div className="col-md-6">
                 <label className="visually-hidden">UST</label>
-                <input disabled type="number" className="form-control"/>
+                <input min='0' type="number" className="form-control"/>
               </div>
               <div className="col-md-3">
-                <button disabled type="submit" className="btn" style={{backgroundColor: '#003B37', color: 'white'}}>Withdraw</button>
+                <button onClick={onClickReset} type="submit" className="btn" style={{backgroundColor: '#003B37', color: 'white'}}>Withdraw</button>
               </div>
             </form>
             <br/><br/>
@@ -162,7 +201,7 @@ function Bootstrap() {
                 Claimable: 100 MIN
               </div>
               <div className="col-md-6">
-                <button disabled type="submit" className="btn" style={{backgroundColor: '#003B37', color: 'white'}}>Claim MIN</button>
+                <button type="submit" className="btn" style={{backgroundColor: '#003B37', color: 'white'}}>Claim MIN</button>
               </div>
             </form>
             <br/><br/>
@@ -176,7 +215,7 @@ function Bootstrap() {
                 Balance: 100 MIN
               </div>
               <div className="col-md-6">
-                <button disabled type="submit" className="btn" style={{backgroundColor: '#003B37', color: 'white'}}>Sell MIN</button>
+                <button type="submit" className="btn" style={{backgroundColor: '#003B37', color: 'white'}}>Sell MIN</button>
               </div>
             </form>
             <br/><br/>
@@ -190,4 +229,4 @@ function Bootstrap() {
   );
 }
 
-export default Bootstrap;
+export default IPR;

@@ -6,8 +6,6 @@ import { ConnectWallet } from './ConnectWallet'
 import { WalletStatus, WalletInfo } from '@terra-dev/use-wallet'
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import { useWallet } from '@terra-money/wallet-provider';
-import ReactDOM from 'react-dom'
-
 
 const client = new LCDClient({
   URL: 'https://lcd.terra.dev',

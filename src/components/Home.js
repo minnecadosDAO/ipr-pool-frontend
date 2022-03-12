@@ -22,15 +22,15 @@ function Home() {
         <div className="footer flex gap-x-8 align-center justify-center mt-8 md:mt-12">
 
           <a href="https://twitter.com/minnecados" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon height="25" width="25" className='fa svga' icon={faTwitter} />
+            <FontAwesomeIcon height="40" width="40" className='fa svga' icon={faTwitter} />
           </a>
 
           <a href="https://discord.gg/kqVfW4J8RP" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon height="25" width="25" className='fa svga' icon={faDiscord} />
+            <FontAwesomeIcon height="40" width="40" className='fa svga' icon={faDiscord} />
           </a>
 
           <a href="https://github.com/minnecadosDAO" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon height="25" width="25" className='fa svga' icon={faGithub} />
+            <FontAwesomeIcon height="40" width="40" className='fa svga' icon={faGithub} />
           </a>
 
         </div>
