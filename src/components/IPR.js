@@ -212,10 +212,11 @@ function IPR() {
             <h2>Sell MIN</h2><br/>
             <form className="row g-3">
               <div className="col-md-6">
-                Balance: 100 MIN
+                <label className="visually-hidden">UST</label>
+                <input min='0' type="number" className="form-control"/>
               </div>
-              <div className="col-md-6">
-                <button type="submit" className="btn" style={{backgroundColor: '#003B37', color: 'white'}}>Sell MIN</button>
+              <div className="col-md-3">
+                <button onClick={onClickReset} type="submit" className="btn" style={{backgroundColor: '#003B37', color: 'white'}}>Sell MIN</button>
               </div>
             </form>
             <br/><br/>
