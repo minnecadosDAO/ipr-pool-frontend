@@ -163,7 +163,7 @@ function IPR() {
             <form className="row g-3">
               <div className="col-md-6">
                 <label className="visually-hidden">UST</label>
-                <input min='0' type="number" className="form-control"/>
+                <input min='0' type="number" step="0.0001" className="form-control"/>
               </div>
               <div className="col-md-6">
                 <button onClick={onClickIncrement} type="submit" className="btn" style={{backgroundColor: '#003B37', color: 'white'}}>Deposit</button>
@@ -178,7 +178,7 @@ function IPR() {
             <form className="row g-3">
               <div className="col-md-6">
                 <label className="visually-hidden">UST</label>
-                <input min='0' type="number" className="form-control"/>
+                <input min='0' type="number" step="0.0001" className="form-control"/>
               </div>
               <div className="col-md-3">
                 <button onClick={onClickReset} type="submit" className="btn" style={{backgroundColor: '#003B37', color: 'white'}}>Withdraw</button>
@@ -213,7 +213,7 @@ function IPR() {
             <form className="row g-3">
               <div className="col-md-6">
                 <label className="visually-hidden">UST</label>
-                <input min='0' type="number" className="form-control"/>
+                <input min='0' type="number" step="0.0001" className="form-control"/>
               </div>
               <div className="col-md-6">
                 <button onClick={onClickReset} type="submit" className="btn" style={{backgroundColor: '#003B37', color: 'white'}}>Sell MIN</button>
