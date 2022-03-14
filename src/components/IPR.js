@@ -215,7 +215,7 @@ function IPR() {
                 <label className="visually-hidden">UST</label>
                 <input min='0' type="number" className="form-control"/>
               </div>
-              <div className="col-md-3">
+              <div className="col-md-6">
                 <button onClick={onClickReset} type="submit" className="btn" style={{backgroundColor: '#003B37', color: 'white'}}>Sell MIN</button>
               </div>
             </form>
