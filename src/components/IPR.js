@@ -43,6 +43,8 @@ const useStyles = makeStyles((theme: Theme) =>
 function IPR() {
   const classNames = useStyles();
   const [address, setAddress] = useState();
+  const [depositValue, setDepositValue] = useState(0)
+
 
   useEffect(() => {
     const getAddress = async () => {
@@ -108,6 +110,13 @@ function IPR() {
     setUpdating(false)
   }
 
+  const onClickDeposit = async () => {
+    setUpdating(true)
+    await execute.DepositUst(connectedWallet, connectedWallet, depositValue)
+    //setCount((await query.getCount(connectedWallet)).count)
+    setUpdating(false)
+  }
+
   const onClickReset = async () => {
     setUpdating(true)
     console.log(resetValue)
@@ -166,7 +175,7 @@ function IPR() {
                 <input min='0' type="number" step="0.0001" className="form-control"/>
               </div>
               <div className="col-md-6">
-                <button onClick={onClickIncrement} type="submit" className="btn" style={{backgroundColor: '#003B37', color: 'white'}}>Deposit</button>
+                <button onClick={onClickDeposit} type="submit" className="btn" style={{backgroundColor: '#003B37', color: 'white'}}>Deposit</button>
               </div>
             </form>
             <br/><br/>
