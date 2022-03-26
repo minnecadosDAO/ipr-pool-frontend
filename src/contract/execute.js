@@ -45,10 +45,12 @@ const _exec =
 
 // ==== execute contract ====
 
-export const deposit = _exec({ depositUst: {} });
+export const DepositUst = async (wallet, entry_address, amount) => _exec({ DepositUst: {entry_address, amount} })(wallet);
 
-export const withdraw = _exec({ withdrawUst: {} });
+export const WithdrawUst = _exec({ WithdrawUst: {} });
 
-export const claim = _exec({ claimReward: {} });
+export const ClaimReward = _exec({ ClaimReward: {} });
 
-export const sell = _exec({ sellReward: {} });
+export const SellReward = _exec({ SellReward: {} });
+
+//export const reset = async (wallet, count) => _exec({ reset: { count } })(wallet);
