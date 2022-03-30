@@ -3,7 +3,7 @@ import React from 'react';
 import '../App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDiscord, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faDiscord, faTwitter, faGithub, faMedium } from '@fortawesome/free-brands-svg-icons';
 import Navbar from './Navbar';
 
 function Home() {
@@ -30,6 +30,10 @@ function Home() {
 
           <a href="https://github.com/minnecadosDAO" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon height="40" width="40" className='fa svga' icon={faGithub} />
+          </a>
+
+          <a href="https://medium.com/@minnecados" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon height="40" width="40" className='fa svga' icon={faMedium} />
           </a>
 
         </div>
