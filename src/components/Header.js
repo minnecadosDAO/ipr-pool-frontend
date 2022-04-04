@@ -22,22 +22,12 @@ let faq = false;
 
 function getPath() {
   const pathname = window.location.pathname //returns the current url minus the domain name
-  if(pathname === '/app/ipr'){
+  if(pathname === '/'){
     bootstrap = true;
     stake = false;
     perpetual = false;
     faq = false;
-  } else if(pathname === '/app/stake'){
-    stake = true;
-    bootstrap = false;
-    perpetual = false;
-    faq = false;
-  } else if(pathname === '/app/perpetual'){
-    perpetual = true;
-    bootstrap = false;
-    stake = false;
-    faq = false;
-  } else if(pathname === '/app/faq'){
+  } else if(pathname === '/faq'){
     faq = true;
     bootstrap = false;
     stake = false;
@@ -62,16 +52,10 @@ const Header = () => {
           <SidebarContent>
             <Menu iconShape="square">
               <MenuItem active={bootstrap} icon={<GiFurBoot />}>
-                <Link style={{color: 'black'}} to='/app/ipr'>IPR Pool</Link>
-              </MenuItem>
-              <MenuItem active={stake} icon={<GiFarmer />}>
-                <Link style={{color: 'black'}} to='/app/stake'>Stake</Link>
-              </MenuItem>
-              <MenuItem active={perpetual} icon={<FaSwimmingPool />}>
-                <Link style={{color: 'black'}} to='/app/perpetual'>Perpetual Pool</Link>
+                <Link style={{color: 'black'}} to='/'>IPR Pool</Link>
               </MenuItem>
               <MenuItem active={faq} icon={<FiFileText />}>
-                <Link style={{color: 'black'}} to='/app/faq'>FAQ</Link>
+                <Link style={{color: 'black'}} to='/faq'>FAQ</Link>
               </MenuItem>
             </Menu>
           </SidebarContent>
