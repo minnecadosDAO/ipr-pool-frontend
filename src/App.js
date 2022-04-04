@@ -13,11 +13,8 @@ function App() {
     <Router>
       <div>
         <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/app/ipr" element={<IPR />}/>
-          <Route path="/app/stake" element={<Stake />}/>
-          <Route path="/app/perpetual" element={<Perpetual />}/>
-          <Route path="/app/faq" element={<Faq />}/>
+          <Route path="/" element={<IPR />}/>
+          <Route path="/faq" element={<Faq />}/>
         </Routes>
       </div>
     </Router>
