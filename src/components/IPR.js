@@ -111,6 +111,7 @@ function IPR() {
   }
 
   const onClickDeposit = async () => {
+    console.log('trying depositing')
     setUpdating(true)
     await execute.DepositUst(connectedWallet, connectedWallet, depositValue)
     //setCount((await query.getCount(connectedWallet)).count)
