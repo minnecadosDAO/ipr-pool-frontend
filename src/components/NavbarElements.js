@@ -49,21 +49,17 @@ margin-right: -24px;
 /* Third Nav */
 /* width: 100vw;
 white-space: nowrap; */
-@media screen and (max-width: 768px) {
-	display: none;
-}
 `;
 
 export const NavBtn = styled.nav`
-display: flex; 
+display: flex;
 align-items: center;
 margin-right: 24px;
+justify-content: flex-end;
+
 /* Third Nav */
 /* justify-content: flex-end;
 width: 100vw; */
-@media screen and (max-width: 768px) {
-	display: none;
-}
 `;
 
 export const NavBtnLink = styled(Link)`
